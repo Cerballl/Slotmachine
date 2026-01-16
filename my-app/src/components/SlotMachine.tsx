@@ -67,7 +67,6 @@ export const SlotMachine = () => {
         {isSpinning ? 'Spinning...' : 'Play'}
       </button>
 
-      <div className="balance">Balance: {balance}$</div>
-    </div>
+      <div className="balance">Balance: {balance}$</div>    </div>
   );
 };
