@@ -1,0 +1,41 @@
+.reel-container {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reel {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reel-container.spinning .reel {
+  animation: spin 0.1s linear infinite;
+  transition: none;
+}
+
+.reel-symbol {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.reel-symbol img {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
